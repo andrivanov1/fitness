@@ -1,0 +1,460 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Avenir Next Cyr Regular';
+  src: url("../fonts/AvenirNextCyr-Regular.eot");
+  src: url("../fonts/AvenirNextCyr-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNextCyr-Regular.woff") format("woff"), url("../fonts/AvenirNextCyr-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next Cyr Medium';
+  src: url("../fonts/AvenirNextCyr-Medium.eot");
+  src: url("../fonts/AvenirNextCyr-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNextCyr-Medium.woff") format("woff"), url("../fonts/AvenirNextCyr-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas';
+  src: url("../fonts/BebasNeueBold.eot");
+  src: url("../fonts/BebasNeueBold.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeueBold.woff") format("woff"), url("../fonts/BebasNeueBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello.eot?17441985");
+  src: url("../fonts/fontello.eot?17441985#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?17441985") format("woff2"), url("../fonts/fontello.woff?17441985") format("woff"), url("../fonts/fontello.ttf?17441985") format("truetype"), url("../fonts/fontello.svg?17441985#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+          @media screen and (-webkit-min-device-pixel-ratio:0) {
+            @font-face {
+              font-family: 'fontello';
+              src: url('../font/fontello.svg?17441985#fontello') format('svg');
+            }
+          }
+          */
+[class^=" icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-twitter:before {
+  content: '\f099';
+}
+
+/* '' */
+.icon-facebook:before {
+  content: '\f09a';
+}
+
+/* '' */
+.icon-instagram:before {
+  content: '\f16d';
+}
+
+/* '' */
+.icon-vkontakte:before {
+  content: '\f189';
+}
+
+/* '' */
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Avenir Next Cyr Regular';
+}
+
+img {
+  max-width: 100%;
+}
+
+.button {
+  text-transform: uppercase;
+  text-shadow: 0px 2px 21px 0px rgba(239, 255, 251, 0.46);
+  background-color: #23dcb8;
+  width: 320px;
+  height: 75px;
+  border-radius: 37.5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  -webkit-box-shadow: 0px 12px 43px 0px rgba(35, 220, 184, 0.31);
+          box-shadow: 0px 12px 43px 0px rgba(35, 220, 184, 0.31);
+  display: block;
+  outline: none;
+}
+
+.header {
+  background: #1c384a url(../img/header-bg.png) no-repeat bottom/cover;
+  color: #fff;
+  padding-top: 36px;
+  padding-bottom: 239px;
+}
+
+.header-title {
+  max-width: 641px;
+  text-transform: uppercase;
+  font-size: 106px;
+  font-family: 'Bebas', sans-serif;
+  margin-bottom: 30px;
+}
+
+.header-subtitle {
+  display: block;
+  font-weight: 27px;
+  margin-bottom: 84px;
+}
+
+.navbar {
+  margin-bottom: 229px;
+}
+
+.navbar-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-logo__name {
+  font-size: 26px;
+  margin-right: 39px;
+}
+
+.navbar-logo__description {
+  font-size: 16px;
+  padding-left: 39px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navbar-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navbar-phone {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navbar-social__item {
+  padding: 0;
+  margin-right: 2px;
+}
+
+.navbar-social__item:last-child {
+  margin-right: 0;
+}
+
+.navbar-social__link {
+  color: #fff;
+}
+
+.features {
+  margin-top: 100px;
+}
+
+.features-text {
+  font-family: 'Bebas';
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 0.396;
+  text-align: center;
+}
+
+.features-block__one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 50px;
+}
+
+.features-block__two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 50px;
+}
+
+.item1 {
+  background: url(../img/item1.png) no-repeat top;
+  height: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center;
+}
+
+.item2 {
+  background: url(../img/item2.png) no-repeat top;
+  height: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.item3 {
+  background: url(../img/item3.png) no-repeat top;
+  height: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center;
+}
+
+.item4 {
+  background: url(../img/item3.png) no-repeat top;
+  height: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center;
+}
+
+.item5 {
+  background: url(../img/item5.png) no-repeat top;
+  height: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: space-end;
+      -ms-flex-pack: space-end;
+          justify-content: space-end;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+}
+
+.item6 {
+  background: url(../img/item6.png) no-repeat top;
+  height: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center;
+}
+
+.item7 {
+  background: url(../img/item7.png) no-repeat top;
+  height: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center;
+}
+
+.item8 {
+  background: url(../img/item8.png) no-repeat top;
+  height: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center;
+  width: 12%;
+}
+
+.aboutme {
+  padding-top: 50px;
+}
+
+.bg {
+  background: #f8fbfa url(../img/aboutme.png) no-repeat left 20%;
+  height: 710px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aboutme-logo {
+  margin-left: 700px;
+  font-family: 'Bebas';
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 0.396;
+}
+
+.aboutme-text {
+  margin-left: 700px;
+  font-family: 'Avenir Next Cyr Medium';
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.btn-aboutme {
+  background-color: transparent;
+  border: #23dcb8 solid;
+  color: #23dcb8;
+  margin-left: 700px;
+  outline: none;
+}
+
+.connectme {
+  margin-top: 100px;
+}
+
+.connectme-text {
+  text-align: center;
+  font-family: 'Bebas';
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 0.396;
+}
+
+.connectme-text__p {
+  font-family: 'Avenir Next Cyr Medium';
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.connectme-form {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.form {
+  width: 360px;
+  height: 65px;
+  border: none;
+  border-radius: 10px;
+  background-color: #dbdedd;
+  padding-left: 30px;
+  margin-left: 30px;
+  font-family: 'Avenir Next Cyr Medium';
+  font-size: 16px;
+  outline: none;
+}
+
+.form:first-child {
+  margin-left: 0;
+}
+
+.politic {
+  text-align: center;
+  font-family: 'Avenir Next Cyr Medium';
+  font-size: 16px;
+  color: #888888;
+  padding-top: 50px;
+}
+
+.connectme-btn {
+  margin-left: 35%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.footer {
+  background: url(../img/people.png) no-repeat center;
+  height: 920px;
+}
+
+.footer-text {
+  text-align: center;
+  font-family: 'Bebas';
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 0.396;
+  color: #fff;
+  padding-top: 200px;
+}
+/*# sourceMappingURL=style.css.map */
